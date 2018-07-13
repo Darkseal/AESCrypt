@@ -8,6 +8,12 @@ The answer is basically the same we usually do whenever we end up reinventing th
 
 In order to fullfill this tasks we came up with the following package, which we called AESCrypt - pretty original, isn't it? The usage is still fairly simple and very similar to the other AES-based packages - as long as you don't need to mess up with all these settings and are ok with the industry-standard defaults - yet it also has a decent (and further expandable) option class that can be configured to handle most of the encryption details.
 
+# How it works
+The package is made of three classes:
+* **AESCrypt** - the main crypto handler, containing the Encrypt and Decrypt methods and the actual implementation logic, which is built upon the AesManaged  and AESCryptOptions  ASP.NET legacy classes.
+* **AESCryptOptions** - a POCO class containing the AES encrypt/decrypt options, together with their default settings.
+* **AESPasswordHash** - a simple ENUM containing the available options for password hash - SHA1, MD5 or None.
+
 # Usage Samples
 Let's start with a couple encrypt & decrypt code samples to see how it can be used in a typical back-end scenario:
 
