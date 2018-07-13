@@ -10,9 +10,9 @@ In order to fullfill this tasks we came up with the following package, which we 
 
 # How it works
 The package is made of three classes:
-* **AESCrypt** - the main crypto handler, containing the Encrypt and Decrypt methods and the actual implementation logic, which is built upon the AesManaged  and AESCryptOptions  ASP.NET legacy classes.
+* **AESCrypt** - the main crypto handler, containing the `Encrypt` and `Decrypt` methods and the actual implementation logic, which is built upon the `AesManaged` and `AESCryptOptions` ASP.NET legacy classes.
 * **AESCryptOptions** - a POCO class containing the AES encrypt/decrypt options, together with their default settings.
-* **AESPasswordHash** - a simple ENUM containing the available options for password hash - SHA1, MD5 or None.
+* **AESPasswordHash** - a simple ENUM containing the available options for password hash - `SHA1`, `MD5` or `None`.
 
 # Usage Samples
 Let's start with a couple encrypt & decrypt code samples to see how it can be used in a typical back-end scenario:
@@ -44,7 +44,7 @@ var encryptedText = new AESCrypt(passPhrase, iv, opts).Encrypt();
 var sourceText = new AESCrypt(passPhrase, iv, opts).Decrypt(encryptedText);
 ```
 
-As we can see, we can use either the simple mode - which uses the most common AES standards - or an advanced mode if we need more granular control.
+As we can see, we can use either the **simple mode** - which uses the most common AES standards - or a more **advanced mode** if we need more granular control.
 
 # Online Resources
 * Author's official website: https://www.ryadel.com/
